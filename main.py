@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--port', metavar='N', type=int)
 parser.add_argument('--production', action='store_true')
 parser.add_argument('--host', type=str, default='0.0.0.0')
-parser.add_argument('--url', type=str, default='/api')
+parser.add_argument('--url', type=str, default='')
 args = parser.parse_args()
 
 
