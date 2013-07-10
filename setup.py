@@ -20,7 +20,7 @@ install_requires = [
 
 setup(
     name='menzy',
-    version='1.0.1',
+    version='1.0.2',
     author=', '.join(authors),
     url='http://menzy.michalwiglasz.cz',
     packages=find_packages(exclude=['tests']),
