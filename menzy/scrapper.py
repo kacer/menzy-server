@@ -17,14 +17,14 @@ def get_cantine_list():
 
     return cantines
 
-    for cantine in cantines.itervalues():
-        print ">>>", cantine['id'], cantine['name'].replace(u"–", "-")
-        print cantine['menu_url']
-        print cantine['img']
-        print cantine['description'].replace(u"–", "-")
-        print ', '.join(cantine['hours'].itervalues()).replace(u"–", "-")
-        print
-        print get_menu(cantine['menu_url'])
+    # for cantine in cantines.itervalues():
+    #     print ">>>", cantine['id'], cantine['name'].replace(u"–", "-")
+    #     print cantine['menu_url']
+    #     print cantine['img']
+    #     print cantine['description'].replace(u"–", "-")
+    #     print ', '.join(cantine['hours'].itervalues()).replace(u"–", "-")
+    #     print
+    #     print get_menu(cantine['menu_url'])
 
 
 def get_info():
@@ -37,7 +37,7 @@ def get_info():
                                             'address', 'description',
                                             'hours']))
         t.h2.small.decompose()
-        cantine['name'] = t.h2.get_text()
+        cantine['name'] = t.h2.get_text().strip()
         cantine['img'] = base_url + t.img['src'] if t.img else None
 
         justobal = t.find('div', 'justobal')
